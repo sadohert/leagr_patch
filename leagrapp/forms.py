@@ -11,8 +11,8 @@ from registration.models import RegistrationProfile
 
 class GameEditForm(forms.ModelForm):
     class Meta:
-				model = Game
-				fields = ('home_score', 'away_score')
+        model = Game
+        fields = ('home_score', 'away_score')
         #exclude = UserTraits.properties().keys()
 
     def save(self, domain_override=""):
@@ -84,7 +84,7 @@ class UserRegistrationForm(forms.ModelForm):
         """
         email = self.cleaned_data['email'].lower()
         if User.all().filter('email =', email).filter(
-                'is_active =', True).count(1):
+            'is_active =', True).count(1):
             raise forms.ValidationError(__(u'This email address is already in use. Please supply a different email address.'))
         return email
 

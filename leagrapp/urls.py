@@ -7,4 +7,4 @@ urlpatterns = patterns('leagrapp.views',
     (r'(?P<league>\w+)/div/(?P<division>\w+)/$', 'division_main'),
     (r'(?P<league>\w+)/$', 'league_main'),
     (r'.*/$', 'leagr_main'),
-		)
+    )

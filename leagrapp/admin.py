@@ -5,7 +5,7 @@ class TeamsInline(admin.TabularInline):
     model = Team
 
 class GamesInline(admin.TabularInline):
-		model = Game
+    model = Game
 
 class DivisionAdmin(admin.ModelAdmin):
     inlines = (TeamsInline, GamesInline)
