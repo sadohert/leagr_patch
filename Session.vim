@@ -49,27 +49,27 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +2 ~/development/google_ae/leagr_patch//urls.py
+badd +15 ~/development/google_ae/leagr_patch//urls.py
 badd +1 __init__.py
 badd +17 app.yaml
 badd +17 index.yaml
 badd +59 settings.py
-badd +76 leagrapp/views.py
+badd +35 leagrapp/views.py
 badd +7 leagrapp/templates/admin_created.html
 badd +17 leagrapp/templates/person_confirm_delete.html
 badd +74 leagrapp/models.py
-badd +21 leagrapp/forms.py
+badd +1 leagrapp/forms.py
 badd +9 leagrapp/templates/team_roster.html
 badd +17 leagrapp/templates/person_form.html
 badd +2 leagrapp/load_test_data.py
 badd +2 leagrapp/admin.py
-badd +6 leagrapp/urlsauto.py
+badd +4 leagrapp/urlsauto.py
 badd +11 leagrapp/urls.py
 badd +51 templates/base.html
-badd +23 leagrapp/templates/division.html
-badd +6 leagrapp/templates/game_form.html
+badd +37 leagrapp/templates/division.html
+badd +12 leagrapp/templates/game_form.html
 badd +5 ../USEFUL_gae.txt
-badd +0 leagrapp/templates/leagr_mainpage.html
+badd +6 leagrapp/templates/leagr_mainpage.html
 silent! argdel *
 edit leagrapp/forms.py
 set splitbelow splitright
@@ -101,17 +101,17 @@ set nosplitright
 wincmd t
 set winheight=1 winwidth=1
 exe 'vert 1resize ' . ((&columns * 32 + 103) / 207)
-exe '2resize ' . ((&lines * 32 + 33) / 66)
+exe '2resize ' . ((&lines * 28 + 29) / 59)
 exe 'vert 2resize ' . ((&columns * 57 + 103) / 207)
-exe '3resize ' . ((&lines * 31 + 33) / 66)
+exe '3resize ' . ((&lines * 28 + 29) / 59)
 exe 'vert 3resize ' . ((&columns * 57 + 103) / 207)
-exe '4resize ' . ((&lines * 32 + 33) / 66)
+exe '4resize ' . ((&lines * 28 + 29) / 59)
 exe 'vert 4resize ' . ((&columns * 58 + 103) / 207)
-exe '5resize ' . ((&lines * 32 + 33) / 66)
+exe '5resize ' . ((&lines * 28 + 29) / 59)
 exe 'vert 5resize ' . ((&columns * 57 + 103) / 207)
-exe '6resize ' . ((&lines * 31 + 33) / 66)
+exe '6resize ' . ((&lines * 28 + 29) / 59)
 exe 'vert 6resize ' . ((&columns * 58 + 103) / 207)
-exe '7resize ' . ((&lines * 31 + 33) / 66)
+exe '7resize ' . ((&lines * 28 + 29) / 59)
 exe 'vert 7resize ' . ((&columns * 57 + 103) / 207)
 argglobal
 enew
@@ -328,12 +328,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 21 - ((17 * winheight(0) + 16) / 32)
+let s:l = 3 - ((2 * winheight(0) + 14) / 28)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-21
-normal! 032l
+3
+normal! 0
 wincmd w
 argglobal
 edit leagrapp/views.py
@@ -432,15 +432,223 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 21 - ((12 * winheight(0) + 15) / 31)
+let s:l = 39 - ((5 * winheight(0) + 14) / 28)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-21
-normal! 03l
+39
+normal! 0
 wincmd w
 argglobal
-edit leagrapp/templates/leagr_mainpage.html
+edit leagrapp/load_test_data.py
+setlocal noarabic
+setlocal autoindent
+setlocal autoread
+setlocal balloonexpr=
+setlocal nobinary
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal comments=://,b:#,:XCOMM,n:>,fb:-,s:/*,mb:**,ex:*/,fb:*
+setlocal commentstring=#%s
+setlocal complete=.,w,b,u,t,i
+setlocal completefunc=
+setlocal nocopyindent
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal noexpandtab
+if &filetype != 'python'
+setlocal filetype=python
+endif
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=cq
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=0
+setlocal include=^s*\\(from\\|import\\)
+setlocal includeexpr=substitute(v:fname,'\\.','/','g')
+setlocal indentexpr=GetPythonIndent(v:lnum)
+setlocal indentkeys=0{,0},:,!^F,o,O,e,<:>,=elif,=except
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keymap=
+setlocal keywordprg=pydoc
+setlocal nolinebreak
+setlocal nolisp
+setlocal nolist
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=octal,hex
+setlocal nonumber
+setlocal numberwidth=4
+setlocal omnifunc=pythoncomplete#Complete
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=4
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=.py
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'python'
+setlocal syntax=python
+endif
+setlocal tabstop=2
+setlocal tags=
+setlocal textwidth=79
+setlocal thesaurus=
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 1 - ((0 * winheight(0) + 14) / 28)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+wincmd w
+argglobal
+edit app.yaml
+setlocal noarabic
+setlocal autoindent
+setlocal autoread
+setlocal balloonexpr=
+setlocal nobinary
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal comments=:#
+setlocal commentstring=#\ %s
+setlocal complete=.,w,b,u,t,i
+setlocal completefunc=
+setlocal nocopyindent
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'yaml'
+setlocal filetype=yaml
+endif
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=croql
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=0
+setlocal include=
+setlocal includeexpr=
+setlocal indentexpr=
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keymap=
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal nolist
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=octal,hex
+setlocal nonumber
+setlocal numberwidth=4
+setlocal omnifunc=
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=4
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'yaml'
+setlocal syntax=yaml
+endif
+setlocal tabstop=2
+setlocal tags=
+setlocal textwidth=79
+setlocal thesaurus=
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 17 - ((16 * winheight(0) + 14) / 28)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+17
+normal! 0
+wincmd w
+argglobal
+edit templates/base.html
 setlocal noarabic
 setlocal autoindent
 setlocal autoread
@@ -466,8 +674,8 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal noexpandtab
-if &filetype != 'htmldjango'
-setlocal filetype=htmldjango
+if &filetype != 'xhtml'
+setlocal filetype=xhtml
 endif
 setlocal foldcolumn=0
 setlocal foldenable
@@ -524,8 +732,8 @@ setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
-if &syntax != 'htmldjango'
-setlocal syntax=htmldjango
+if &syntax != 'xhtml'
+setlocal syntax=xhtml
 endif
 setlocal tabstop=2
 setlocal tags=
@@ -536,219 +744,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 5 - ((4 * winheight(0) + 16) / 32)
+let s:l = 27 - ((1 * winheight(0) + 14) / 28)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-5
-normal! 048l
-wincmd w
-argglobal
-edit leagrapp/templates/game_form.html
-setlocal noarabic
-setlocal autoindent
-setlocal autoread
-setlocal balloonexpr=
-setlocal nobinary
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal comments=://,b:#,:%,:XCOMM,n:>,fb:-,s:/*,mb:**,ex:*/,fb:*
-setlocal commentstring=<!--%s-->
-setlocal complete=.,w,b,u,t,i
-setlocal completefunc=
-setlocal nocopyindent
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal noexpandtab
-if &filetype != 'htmldjango'
-setlocal filetype=htmldjango
-endif
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=cq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=0
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=HtmlIndentGet(v:lnum)
-setlocal indentkeys=o,O,*<Return>,<>>,{,}
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
-setlocal keymap=
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-setlocal nolist
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
-setlocal modeline
-setlocal modifiable
-setlocal nrformats=octal,hex
-setlocal nonumber
-setlocal numberwidth=4
-setlocal omnifunc=htmlcomplete#CompleteTags
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal shiftwidth=4
-setlocal noshortname
-setlocal nosmartindent
-setlocal softtabstop=0
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=
-setlocal suffixesadd=
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'htmldjango'
-setlocal syntax=htmldjango
-endif
-setlocal tabstop=2
-setlocal tags=
-setlocal textwidth=79
-setlocal thesaurus=
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 5 - ((4 * winheight(0) + 16) / 32)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-5
-normal! 05l
-wincmd w
-argglobal
-edit leagrapp/templates/division.html
-setlocal noarabic
-setlocal autoindent
-setlocal autoread
-setlocal balloonexpr=
-setlocal nobinary
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal comments=://,b:#,:%,:XCOMM,n:>,fb:-,s:/*,mb:**,ex:*/,fb:*
-setlocal commentstring=<!--%s-->
-setlocal complete=.,w,b,u,t,i
-setlocal completefunc=
-setlocal nocopyindent
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal noexpandtab
-if &filetype != 'htmldjango'
-setlocal filetype=htmldjango
-endif
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=cq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=0
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=HtmlIndentGet(v:lnum)
-setlocal indentkeys=o,O,*<Return>,<>>,{,}
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
-setlocal keymap=
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-setlocal nolist
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
-setlocal modeline
-setlocal modifiable
-setlocal nrformats=octal,hex
-setlocal nonumber
-setlocal numberwidth=4
-setlocal omnifunc=htmlcomplete#CompleteTags
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal shiftwidth=4
-setlocal noshortname
-setlocal nosmartindent
-setlocal softtabstop=0
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=
-setlocal suffixesadd=
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'htmldjango'
-setlocal syntax=htmldjango
-endif
-setlocal tabstop=2
-setlocal tags=
-setlocal textwidth=79
-setlocal thesaurus=
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 33 - ((12 * winheight(0) + 15) / 31)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-33
+27
 normal! 0
 wincmd w
 argglobal
@@ -848,7 +848,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 74 - ((20 * winheight(0) + 15) / 31)
+let s:l = 74 - ((0 * winheight(0) + 14) / 28)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -857,17 +857,17 @@ normal! 067l
 wincmd w
 3wincmd w
 exe 'vert 1resize ' . ((&columns * 32 + 103) / 207)
-exe '2resize ' . ((&lines * 32 + 33) / 66)
+exe '2resize ' . ((&lines * 28 + 29) / 59)
 exe 'vert 2resize ' . ((&columns * 57 + 103) / 207)
-exe '3resize ' . ((&lines * 31 + 33) / 66)
+exe '3resize ' . ((&lines * 28 + 29) / 59)
 exe 'vert 3resize ' . ((&columns * 57 + 103) / 207)
-exe '4resize ' . ((&lines * 32 + 33) / 66)
+exe '4resize ' . ((&lines * 28 + 29) / 59)
 exe 'vert 4resize ' . ((&columns * 58 + 103) / 207)
-exe '5resize ' . ((&lines * 32 + 33) / 66)
+exe '5resize ' . ((&lines * 28 + 29) / 59)
 exe 'vert 5resize ' . ((&columns * 57 + 103) / 207)
-exe '6resize ' . ((&lines * 31 + 33) / 66)
+exe '6resize ' . ((&lines * 28 + 29) / 59)
 exe 'vert 6resize ' . ((&columns * 58 + 103) / 207)
-exe '7resize ' . ((&lines * 31 + 33) / 66)
+exe '7resize ' . ((&lines * 28 + 29) / 59)
 exe 'vert 7resize ' . ((&columns * 57 + 103) / 207)
 tabnext 1
 if exists('s:wipebuf')
