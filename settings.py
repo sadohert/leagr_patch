@@ -9,7 +9,7 @@ MEDIA_VERSION = 1
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '115d2505-6a2d-4b50-86e6-34b4c5423f25'
 
-ENABLE_PROFILER = True
+#ENABLE_PROFILER = True
 #ONLY_FORCED_PROFILE = True
 #PROFILE_PERCENTAGE = 25
 #SORT_PROFILE_RESULTS_BY = 'cumulative' # default is 'time'
