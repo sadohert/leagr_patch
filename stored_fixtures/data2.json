@@ -1,0 +1,2 @@
+Running on app-engine-patch 1.0
+[{"pk": "agphbGxsZWFndWVzcjYLEg5kamFuZ29fc2Vzc2lvbiIiazpjZmI4M2ZkMjdkYjkxNzRlYWU1ZmU1MGY5YjBjYzQ3OQw", "model": "sessions.session", "fields": {"data": "gAJ9cQBVCnRlc3Rjb29raWVxAVUGd29ya2VkcQJzLmZlYjkwMjU4YjNiYzJlMzY3ZWVjODA1MGFh\nYjJmY2Zm\n", "expiry": "2009-04-01 16:51:21"}}, {"pk": "agphbGxsZWFndWVzciELEgtkamFuZ29fc2l0ZSIQZWNHam5SbXRTeVFtaFVBUQw", "model": "sites.site", "fields": {"domain": "localhost:8000", "name": "localhost:8000"}}]

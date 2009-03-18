@@ -1,0 +1,52 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}"
+    xml:lang="{% firstof LANGUAGE_CODE 'en' %}"
+    lang="{% firstof LANGUAGE_CODE 'en' %}">
+  <head>
+    <title>{% block title %}{% endblock %} </title>
+    {% block css %}
+      {# <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}combined-{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}.css" /> #}
+    {% endblock %}
+
+    {% block js %}
+      {# <script type="text/javascript" src="{{ MEDIA_URL }}combined-{{ LANGUAGE_CODE }}.js"></script> #}
+    {% endblock %}
+
+    {% block extra-head %}{% endblock %}
+  </head>
+
+  <body>
+    {% block header %}
+      <div id="header">
+        <div class="menu">
+          <a href="/">Home</a> |
+          <a href="/admin/">Admin interface</a> |
+          --
+          {% if user.is_authenticated %}
+            Welcome, {{ user.username }}!
+            <a href="{% url django.contrib.auth.views.logout %}">Logout</a>
+          {% else %}
+            <a href="{% url django.contrib.auth.views.login %}">Login</a>
+            <a href="{% url registration.views.register %}">Register</a>
+          {% endif %}
+        </div>
+      </div>
+    {% endblock %}
+    <div id="content" class="column">
+      {% block content-header %}
+				<a href="{% url leagrapp.views.leagr_main %}">Leagr</a>
+				{% if league %}
+					<a href="{% url leagrapp.views.league_main league=league %}">League</a>
+					{% if division %}
+						<a href="{% url leagrapp.views.division_main league=league division=division %}">Division</a>
+					{% endif %}
+				{% endif %}
+      {% endblock %}
+      {% block content %}BLOCK NOT IMPLEMENTED{% endblock %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+﻿application: allleagues
+version: 1
+runtime: python
+api_version: 1
+
+default_expiration: '3650d'
+
+handlers:
+- url: /console/static
+  static_dir: console/app/view/static
+
+- url: /console.*
+  script: console/app/console.py
+
+- url: /load
+  script: leagrapp/load_test_data.py
+
+- url: /media
+  static_dir: _generated_media
+
+- url: /.*
+  script: common/appenginepatch/main.py

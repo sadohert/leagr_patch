@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Game Edit{% endblock %}
+{% block content %}
+<p>{{ form.instance.division }}</p>
+<p>{{ form.instance.date }}</p>
+<p>{{ form.instance }} </p>
+<form action="" method="post" enctype="multipart/form-data">
+    {{ form.as_p }}
+      <input type="submit"
+        value="Apply changes" />
+</form>
+{% endblock %}

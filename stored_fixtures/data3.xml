@@ -1,0 +1,216 @@
+Running on app-engine-patch 1.0
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+<entity kind="auth.user" key="agphbGxsZWFndWVzchQLEglhdXRoX3VzZXIiBWFkbWluDA">
+  <key>tag:allleagues.gmail.com,2009-03-18:auth_user[agphbGxsZWFndWVzchQLEglhdXRoX3VzZXIiBWFkbWluDA]</key>
+  <property name="date_joined" type="gd:when">2009-03-18 17:49:11.048863</property>
+  <property name="email" type="gd:email"><gd:email address="stu.doherty@gmail.com" /></property>
+  <property name="first_name" type="string">Boss</property>
+  <property name="is_active" type="bool">True</property>
+  <property name="is_staff" type="bool">True</property>
+  <property name="is_superuser" type="bool">True</property>
+  <property name="last_login" type="gd:when">2009-03-18 18:05:13.366672</property>
+  <property name="last_name" type="string">Admin</property>
+  <property name="password" type="string">sha512$lRE9mZNO$baed8b8de723fd8646ec04c001dfc0950ace90437cc95a35785fcf16b3160ac65876c6c9d244928f894e0d565d295712459d4e2d0e1daf697d249e15ecec95d4</property>
+  <property name="username" type="string">admin</property>
+</entity>
+<entity kind="sessions.session" key="agphbGxsZWFndWVzcjYLEg5kamFuZ29fc2Vzc2lvbiIiazpjODg2N2QxNzA1MzYxODk5NWQ5YmM1NTI2YzViNTZiNgw">
+  <key>tag:allleagues.gmail.com,2009-03-18:django_session[agphbGxsZWFndWVzcjYLEg5kamFuZ29fc2Vzc2lvbiIiazpjODg2N2QxNzA1MzYxODk5NWQ5YmM1NTI2YzViNTZiNgw]</key>
+  <property name="data" type="blob">Z0FKOWNRQW9WUkpmWVhWMGFGOTFjMlZ5WDJKaFkydGxibVJ4QVZVcFpHcGhibWR2TG1OdmJuUnlhV0l1WVhWMGFDNWlZV05yWlc1awpjeTVOYjJSbGJFSmhZMnRsYm1SeEFsVU5YMkYxZEdoZmRYTmxjbDlwWkhFRFdDNEFBQUJoWjNCb1lrZDRjMXBYUm01a1YxWjZZMmhSClRFVm5iR2hrV0ZKdldETldlbHBZU1dsQ1YwWnJZbGRzZFVSQmNRUjFMamM1TldFd1pUY3dZV0ZrWTJOaFkyVm1ZVFZoWm1GaE5EQmoKWVdKaFlXWmsK</property>
+  <property name="expiry" type="gd:when">2009-04-01 18:05:13.373927</property>
+</entity>
+<entity kind="sites.site" key="agphbGxsZWFndWVzciELEgtkamFuZ29fc2l0ZSIQQ3d0cFI5bVFxQ045M2xJSww">
+  <key>tag:allleagues.gmail.com,2009-03-18:django_site[agphbGxsZWFndWVzciELEgtkamFuZ29fc2l0ZSIQQ3d0cFI5bVFxQ045M2xJSww]</key>
+  <property name="domain" type="string">localhost:8000</property>
+  <property name="name" type="string">localhost:8000</property>
+</entity>
+<entity kind="leagrapp.league" key="agphbGxsZWFndWVzchULEg9sZWFncmFwcF9sZWFndWUYAQw">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_league[agphbGxsZWFndWVzchULEg9sZWFncmFwcF9sZWFndWUYAQw]</key>
+  <property name="name" type="string">testleague</property>
+</entity>
+<entity kind="leagrapp.division" key="agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</key>
+  <property name="league" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_league[agphbGxsZWFndWVzchULEg9sZWFncmFwcF9sZWFndWUYAQw]</property>
+  <property name="title" type="string">Premier</property>
+</entity>
+<entity kind="leagrapp.team" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAMM">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAMM]</key>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="name" type="string">Giraffe</property>
+</entity>
+<entity kind="leagrapp.team" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAQM">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAQM]</key>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="name" type="string">Dogs</property>
+</entity>
+<entity kind="leagrapp.team" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAUM">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAUM]</key>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="name" type="string">Cats</property>
+</entity>
+<entity kind="leagrapp.team" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAYM">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAYM]</key>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="name" type="string">Frogs</property>
+</entity>
+<entity kind="leagrapp.team" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAcM">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAcM]</key>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="name" type="string">Birds</property>
+</entity>
+<entity kind="leagrapp.team" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAgM">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAgM]</key>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="name" type="string">Lions</property>
+</entity>
+<entity kind="leagrapp.game" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGAkM">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_game[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGAkM]</key>
+  <property name="away" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAQM]</property>
+  <property name="away_score" type="int">1</property>
+  <property name="date" type="gd:when">2009-03-02 19:00:00</property>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="game_completed" type="bool">True</property>
+  <property name="home" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAMM]</property>
+  <property name="home_score" type="int">10</property>
+</entity>
+<entity kind="leagrapp.game" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGAoM">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_game[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGAoM]</key>
+  <property name="away" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAYM]</property>
+  <property name="away_score" type="null"></property>
+  <property name="date" type="gd:when">2009-03-02 19:00:00</property>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="game_completed" type="bool">False</property>
+  <property name="home" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAUM]</property>
+  <property name="home_score" type="null"></property>
+</entity>
+<entity kind="leagrapp.game" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGAsM">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_game[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGAsM]</key>
+  <property name="away" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAgM]</property>
+  <property name="away_score" type="null"></property>
+  <property name="date" type="gd:when">2009-03-02 19:00:00</property>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="game_completed" type="bool">False</property>
+  <property name="home" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAcM]</property>
+  <property name="home_score" type="null"></property>
+</entity>
+<entity kind="leagrapp.game" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGAwM">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_game[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGAwM]</key>
+  <property name="away" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAMM]</property>
+  <property name="away_score" type="null"></property>
+  <property name="date" type="gd:when">2009-03-09 19:00:00</property>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="game_completed" type="bool">False</property>
+  <property name="home" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAUM]</property>
+  <property name="home_score" type="null"></property>
+</entity>
+<entity kind="leagrapp.game" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGA0M">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_game[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGA0M]</key>
+  <property name="away" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAcM]</property>
+  <property name="away_score" type="null"></property>
+  <property name="date" type="gd:when">2009-03-09 19:00:00</property>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="game_completed" type="bool">False</property>
+  <property name="home" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAQM]</property>
+  <property name="home_score" type="null"></property>
+</entity>
+<entity kind="leagrapp.game" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGA4M">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_game[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGA4M]</key>
+  <property name="away" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAgM]</property>
+  <property name="away_score" type="null"></property>
+  <property name="date" type="gd:when">2009-03-09 19:00:00</property>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="game_completed" type="bool">False</property>
+  <property name="home" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAYM]</property>
+  <property name="home_score" type="null"></property>
+</entity>
+<entity kind="leagrapp.game" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGA8M">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_game[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGA8M]</key>
+  <property name="away" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAcM]</property>
+  <property name="away_score" type="null"></property>
+  <property name="date" type="gd:when">2009-03-16 19:00:00</property>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="game_completed" type="bool">False</property>
+  <property name="home" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAMM]</property>
+  <property name="home_score" type="null"></property>
+</entity>
+<entity kind="leagrapp.game" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGBAM">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_game[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGBAM]</key>
+  <property name="away" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAUM]</property>
+  <property name="away_score" type="null"></property>
+  <property name="date" type="gd:when">2009-03-16 19:00:00</property>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="game_completed" type="bool">False</property>
+  <property name="home" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAgM]</property>
+  <property name="home_score" type="null"></property>
+</entity>
+<entity kind="leagrapp.game" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGBEM">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_game[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGBEM]</key>
+  <property name="away" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAQM]</property>
+  <property name="away_score" type="null"></property>
+  <property name="date" type="gd:when">2009-03-16 19:00:00</property>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="game_completed" type="bool">False</property>
+  <property name="home" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAYM]</property>
+  <property name="home_score" type="null"></property>
+</entity>
+<entity kind="leagrapp.game" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGBIM">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_game[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGBIM]</key>
+  <property name="away" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAMM]</property>
+  <property name="away_score" type="int">3</property>
+  <property name="date" type="gd:when">2009-03-23 19:00:00</property>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="game_completed" type="bool">True</property>
+  <property name="home" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAgM]</property>
+  <property name="home_score" type="int">2</property>
+</entity>
+<entity kind="leagrapp.game" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGBMM">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_game[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGBMM]</key>
+  <property name="away" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAYM]</property>
+  <property name="away_score" type="null"></property>
+  <property name="date" type="gd:when">2009-03-23 19:00:00</property>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="game_completed" type="bool">False</property>
+  <property name="home" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAcM]</property>
+  <property name="home_score" type="null"></property>
+</entity>
+<entity kind="leagrapp.game" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGBQM">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_game[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGBQM]</key>
+  <property name="away" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAQM]</property>
+  <property name="away_score" type="null"></property>
+  <property name="date" type="gd:when">2009-03-23 19:00:00</property>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="game_completed" type="bool">False</property>
+  <property name="home" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAUM]</property>
+  <property name="home_score" type="null"></property>
+</entity>
+<entity kind="leagrapp.game" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGBUM">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_game[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGBUM]</key>
+  <property name="away" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAYM]</property>
+  <property name="away_score" type="null"></property>
+  <property name="date" type="gd:when">2009-03-30 19:00:00</property>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="game_completed" type="bool">False</property>
+  <property name="home" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAMM]</property>
+  <property name="home_score" type="null"></property>
+</entity>
+<entity kind="leagrapp.game" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGBYM">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_game[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGBYM]</key>
+  <property name="away" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAgM]</property>
+  <property name="away_score" type="null"></property>
+  <property name="date" type="gd:when">2009-03-30 19:00:00</property>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="game_completed" type="bool">False</property>
+  <property name="home" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAQM]</property>
+  <property name="home_score" type="null"></property>
+</entity>
+<entity kind="leagrapp.game" key="agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGBcM">
+  <key>tag:allleagues.gmail.com,2009-03-18:leagrapp_game[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF9nYW1lGBcM]</key>
+  <property name="away" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAcM]</property>
+  <property name="away_score" type="null"></property>
+  <property name="date" type="gd:when">2009-03-30 19:00:00</property>
+  <property name="division" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_division[agphbGxsZWFndWVzchcLEhFsZWFncmFwcF9kaXZpc2lvbhgCDA]</property>
+  <property name="game_completed" type="bool">False</property>
+  <property name="home" type="key">tag:allleagues.gmail.com,2009-03-18:leagrapp_team[agphbGxsZWFndWVzchMLEg1sZWFncmFwcF90ZWFtGAUM]</property>
+  <property name="home_score" type="null"></property>
+</entity>
+</django-objects>

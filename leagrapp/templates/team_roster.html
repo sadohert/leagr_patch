@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Team: {{ object_list[0].team.name }}{% endblock %}
+
+{% block content %}
+<h1>Roster</h1>
+<a href="{% url leagrapp.views.league_mainpage division_key=object_list[0].team.key %}">{{ object_list[0].team.division.name }} Home</a>
+
+<ul>
+  {% for player in object_list %}
+    <li>
+		{{ player.first_name }} {{ player.last_name }}
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

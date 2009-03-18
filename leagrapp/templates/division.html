@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}Division Summar:(todo DIV name){% endblock %}
+{% block content %}
+<h1>{{ division }} division of {{ league }}</h1>
+<h1>Standings</h1>
+
+<ul>
+		<li>TEAM  W L T GF GA GD Pts</li>
+  {% for team in standings %}
+    <li>
+		<a href="{% url leagrapp.views.team_main league=league division=division  team=team.0 %}">{{ team.0 }}</a>
+		{{ team.1}} {{ team.2 }} {{ team.3 }} {{ team.4 }}  {{ team.5 }} {{ team.6 }} {{ team.7 }}
+    </li>
+  {% endfor %}
+</ul>
+
+<h1>Upcoming Games</h1>
+
+<ul>
+  {% for game in upcoming_games %}
+    <li>
+		<a href="{% url leagrapp.views.team_main league=league division=division  team=game.home %}">{{ game.home }}</a> vs
+		<a href="{% url leagrapp.views.team_main league=league division=division  team=game.away %}">{{ game.away }}</a> on {{ game.date }} FILTER DATES 
+		{% if user.is_authenticated %} <a href="{% url leagrapp.views.game_edit league=league division=division game=game.key %}">EDIT</a> {{ game }}
+		{% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
+<h1>Past Games</h1>
+<ul>
+  {% for game in past_games %}
+    <li>
+		<a href="{% url leagrapp.views.team_main league=league division=division  team=game.home %}">{{ game.home }}</a> vs
+		<a href="{% url leagrapp.views.team_main league=league division=division  team=game.away %}">{{ game.away }}</a> on {{ game.date }} FILTER DATES 
+		{% if user.is_authenticated %}<a href="{% url leagrapp.views.game_edit league=league division=division game=game.key %}">EDIT</a> {{ game }}
+		{% endif %}
+
+    </li>
+  {% endfor %}
+</ul>
+
+
+{% endblock %}
