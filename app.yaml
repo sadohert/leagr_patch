@@ -12,6 +12,9 @@ handlers:
 - url: /console.*
   script: console/app/console.py
 
+- url: /test.*
+  script: gaeunit.py
+
 - url: /load
   script: leagrapp/load_test_data.py
 

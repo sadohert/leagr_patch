@@ -67,13 +67,16 @@ for i in range(Nweeks):
         g = Game(division=new_division, date=current_week, home=all_teams[pairings[j][h]], away=all_teams[pairings[j][a]], game_completed=False)
         g.put()
 
+        print g
+
         #rotate the pairings
         pairings = rotate_pairings(pairings)
         #swap which is home and which is away
         h = not h
         a = not a
-        #increment date
-        current_week = current_week + datetime.timedelta(7)
+
+    #increment date
+    current_week = current_week + datetime.timedelta(7)
 
 print "DATA LOADED"
 user = User.get_by_key_name('admin')

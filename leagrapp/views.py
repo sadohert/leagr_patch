@@ -46,9 +46,9 @@ def division_main(request, league, division):
     # when the league starts this table should be created once
     # Need to query the datastore for the key of the given division
     d = Division.all()
-    #d.filter('title =', division)
+    d.filter('title =', division)
     division_key = d.fetch(1)
-    print division_key
+    #print division_key
 
     # Do a search for all the games played in the league before today,for each
     games = Game.all()
