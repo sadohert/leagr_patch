@@ -7,7 +7,7 @@
     xml:lang="{% firstof LANGUAGE_CODE 'en' %}"
     lang="{% firstof LANGUAGE_CODE 'en' %}">
   <head>
-    <title>{% block title %}{% endblock %} </title>
+    <title>{% block title %}{% endblock %} - site name</title>
     {% block css %}
       {# <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}combined-{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}.css" /> #}
     {% endblock %}
@@ -25,6 +25,8 @@
         <div class="menu">
           <a href="/">Home</a> |
           <a href="/admin/">Admin interface</a> |
+          <a href="http://code.google.com/p/app-engine-patch/">Visit app-engine-patch</a> |
+          <a href="http://code.google.com/p/app-engine-patch/wiki/Documentation">Documentation</a>
           --
           {% if user.is_authenticated %}
             Welcome, {{ user.username }}!
@@ -38,15 +40,15 @@
     {% endblock %}
     <div id="content" class="column">
       {% block content-header %}
-				<a href="{% url leagrapp.views.leagr_main %}">Leagr</a>
-				{% if league %}
-					<a href="{% url leagrapp.views.league_main league=league %}">League</a>
-					{% if division %}
-						<a href="{% url leagrapp.views.division_main league=league division=division %}">Division</a>
-					{% endif %}
-				{% endif %}
+        {% if error %}<div class="error">{{ error }}</div>{% endif %}
+        {% if info %}<div class="info">{{ info }}</div>{% endif %}
+        {% if messages %}
+          {% for message in messages %}
+            <div class="info">{{ message }}</div>
+          {% endfor %}
+        {% endif %}
       {% endblock %}
-      {% block content %}BLOCK NOT IMPLEMENTED{% endblock %}
+      {% block content %}{% endblock %}
     </div>
   </body>
 </html>

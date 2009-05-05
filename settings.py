@@ -7,7 +7,7 @@ from ragendja.settings_pre import *
 MEDIA_VERSION = 1
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '115d2505-6a2d-4b50-86e6-34b4c5423f25'
+SECRET_KEY = '1234567890'
 
 #ENABLE_PROFILER = True
 #ONLY_FORCED_PROFILE = True
@@ -85,5 +85,23 @@ IGNORE_APP_SETTINGS = IGNORE_APP_URLSAUTO = (
     # 'yetanotherapp',
 )
 
+# Remote access to production server (e.g., via manage.py shell --remote)
+DATABASE_OPTIONS = {
+    # Override remoteapi handler's path (default: '/remote_api').
+    # This is a good idea, so you make it not too easy for hackers. ;)
+    # Don't forget to also update your app.yaml!
+    #'remote_url': '/remote-secret-url',
+
+    # !!!Normally, the following settings should not be used!!!
+
+    # Always use remoteapi (no need to add manage.py --remote option)
+    #'use_remote': True,
+
+    # Change appid for remote connection (by default it's the same as in your app.yaml)
+    #'remote_id': 'otherappid',
+
+    # Change domain (default: <remoteid>.appspot.com)
+    #'remote_host': 'bla.com',
+}
 
 from ragendja.settings_post import *
