@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.5
 #
 # testpaths.py - Set up the correct sys.path for the test suite to run.
 #
