@@ -10,6 +10,7 @@ MEDIA_VERSION = 1
 SECRET_KEY = '1234567890'
 
 #add this comment
+#more comments
 #ENABLE_PROFILER = True
 #ONLY_FORCED_PROFILE = True
 #PROFILE_PERCENTAGE = 25
