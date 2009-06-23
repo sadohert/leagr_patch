@@ -6,6 +6,28 @@ from ragendja.settings_pre import *
 # automatically becomes /media/MEDIA_VERSION/
 MEDIA_VERSION = 1
 
+# By hosting media on a different domain we can get a speedup (more parallel
+# browser connections).
+#if on_production_server or not have_appserver:
+#    MEDIA_URL = 'http://media.mydomain.com/media/%d/'
+
+# Add base media (jquery can be easily added via INSTALLED_APPS)
+COMBINE_MEDIA = {
+    'combined-%(LANGUAGE_CODE)s.js': (
+        # See documentation why site_data can be useful:
+        # http://code.google.com/p/app-engine-patch/wiki/MediaGenerator
+        '.site_data.js',
+    ),
+    'combined-%(LANGUAGE_DIR)s.css': (
+        'global/look.css',
+    ),
+}
+
+# Change your email settings
+if on_production_server:
+    DEFAULT_FROM_EMAIL = 'stu.doherty@gmail.com'
+    SERVER_EMAIL = DEFAULT_FROM_EMAIL
+
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '1234567890'
 
@@ -13,17 +35,18 @@ SECRET_KEY = '1234567890'
 #ONLY_FORCED_PROFILE = True
 #PROFILE_PERCENTAGE = 25
 #SORT_PROFILE_RESULTS_BY = 'cumulative' # default is 'time'
+# Profile only datastore calls
 #PROFILE_PATTERN = 'ext.db..+\((?:get|get_by_key_name|fetch|count|put)\)'
 
 # Enable I18N and set default language to 'en'
 USE_I18N = True
 LANGUAGE_CODE = 'en'
 
-#Restrict supported languages (and JS media generation)
-#LANGUAGES = (
-#    ('de', 'German'),
-#    ('en', 'English'),
-#)
+# Restrict supported languages (and JS media generation)
+LANGUAGES = (
+    ('de', 'German'),
+    ('en', 'English'),
+)
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.auth',
@@ -33,6 +56,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    'ragendja.middleware.ErrorMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     # Django authentication
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -53,16 +77,21 @@ MIDDLEWARE_CLASSES = (
 # Hybrid Django/Google authentication
 #AUTH_USER_MODULE = 'ragendja.auth.hybrid_models'
 
-GLOBALTAGS = (
-    'ragendja.templatetags.ragendjatags',
-    'django.templatetags.i18n',
-)
-
 LOGIN_URL = '/account/login/'
 LOGOUT_URL = '/account/logout/'
 LOGIN_REDIRECT_URL = '/'
 
 INSTALLED_APPS = (
+    # Add jquery support (app is in "common" folder). This automatically
+    # adds jquery to your COMBINE_MEDIA['combined-%(LANGUAGE_CODE)s.js']
+    # Note: the order of your INSTALLED_APPS specifies the order in which
+    # your app-specific media files get combined, so jquery should normally
+    # come first.
+    'jquery',
+
+    # Add blueprint CSS (http://blueprintcss.org/)
+    'blueprintcss',
+
     'django.contrib.auth',
     'django.contrib.sessions',
     'django.contrib.admin',
@@ -97,7 +126,8 @@ DATABASE_OPTIONS = {
     # Always use remoteapi (no need to add manage.py --remote option)
     #'use_remote': True,
 
-    # Change appid for remote connection (by default it's the same as in your app.yaml)
+    # Change appid for remote connection (by default it's the same as in
+    # your app.yaml)
     #'remote_id': 'otherappid',
 
     # Change domain (default: <remoteid>.appspot.com)

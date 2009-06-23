@@ -35,7 +35,7 @@ def createWholeLeague(name, num_divisions, num_teams, num_games, num_finished_ga
     data_set = {}
     for d in range(num_divisions):
         division_name = "Div%d_%s" % (d, league.name)
-        div = createDivision(division_name, league)
+        div = createDivision(division_name, league, 0, 0, 0)
         divisions.append(div)
 
 
@@ -48,7 +48,7 @@ class LeagueTestCase(django.test.TestCase):
 
         self.league = createLeague(name=self.league_name)
         self.division_name = "premier"
-        self.division = createDivision(self.division_name, self.league)
+        self.division = createDivision(self.division_name, self.league, 0, 0, 0)
 
         # Create teams in database
         self.teams = []
@@ -75,7 +75,7 @@ class DivisionTestCase(django.test.TestCase):
         #self.league.put()
         self.league = createLeague(name=self.league_name)
         self.division_name = "premier"
-        self.division = createDivision(self.division_name, self.league)
+        self.division = createDivision(self.division_name, self.league, 0, 0, 0)
 
         # Create teams in database
         self.teams = []
@@ -96,7 +96,7 @@ class GameEditTestCase(django.test.TestCase):
         self.league_name = "testleague"
         self.league = createLeague(name=self.league_name)
         self.division_name = "premier"
-        self.division = createDivision(self.division_name, self.league)
+        self.division = createDivision(self.division_name, self.league, 0, 0, 0)
 
         # Create teams in database
         self.teams = []
